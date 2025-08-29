@@ -5,6 +5,7 @@ export default defineConfig({
   integrations: [tailwind()],
   site: 'https://yoursite.vercel.app',
   build: {
-    output: 'dist', // Specify the output directory
+    output: 'dist',  // Specify the output directory
+    clean: true,     // Clean output directory before building
   },
 });
