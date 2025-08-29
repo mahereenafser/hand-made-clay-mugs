@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Clay & Co. - Handmade Clay Mugs in New York">
+  <section class="relative h-screen flex items-center justify-center bg-gradient-to-br from-amber-100 to-stone-200">
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+    <div class="relative text-center max-w-4xl mx-auto px-4 z-10">
+      <h1 class="text-5xl md:text-7xl font-bold text-stone-800 mb-6">
+        Handcrafted with <span class="text-amber-600">Love</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-stone-600 mb-8">
+        Unique clay mugs that bring warmth to your daily rituals
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/services" class="bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors">
+          View Our Work
+        </a>
+        <a href="/contact" class="border-2 border-stone-800 text-stone-800 px-8 py-3 rounded-lg font-semibold hover:bg-stone-800 hover:text-white transition-colors">
+          Get In Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-stone-800 mb-4">Why Choose Clay & Co.?</h2>
+        <p class="text-xl text-stone-600 max-w-2xl mx-auto">
+          Every piece is lovingly handcrafted in our Brooklyn studio, bringing you unique pottery that tells a story.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div class="w-10 h-10 bg-amber-600 rounded-full"></div>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Unique Designs</h3>
+          <p class="text-stone-600">Each mug is one-of-a-kind, with its own character and charm that machine-made pottery can't replicate.</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div class="w-10 h-10 bg-amber-600 rounded-full"></div>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Premium Materials</h3>
+          <p class="text-stone-600">We use only the finest clays and glazes, ensuring durability and safety for daily use.</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div class="w-10 h-10 bg-amber-600 rounded-full"></div>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Local Artisan</h3>
+          <p class="text-stone-600">Supporting local craftsmanship and sustainable practices right here in New York.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-stone-800 mb-4">Featured Collections</h2>
+        <p class="text-xl text-stone-600">Discover our most popular handcrafted pieces</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-amber-200 to-amber-400"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Morning Glory</h3>
+            <p class="text-stone-600 mb-4">Perfect for your morning coffee ritual</p>
+            <span class="text-2xl font-bold text-amber-600">$45</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-stone-200 to-stone-400"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Earth Tone</h3>
+            <p class="text-stone-600 mb-4">Natural beauty in every sip</p>
+            <span class="text-2xl font-bold text-amber-600">$48</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-200 to-blue-400"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Ocean Breeze</h3>
+            <p class="text-stone-600 mb-4">Calm and serene design</p>
+            <span class="text-2xl font-bold text-amber-600">$52</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
