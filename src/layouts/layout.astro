@@ -10,10 +10,95 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Handcrafted clay mugs made with love in New York" />
+    <meta name="description" content="Handcrafted clay mugs made with love in New York. Unique, durable, and beautiful pottery for your daily rituals." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
   <body class="bg-stone-50 text-stone-800">
-    <!-- rest of your layout code stays the same -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 bg-amber-600 rounded-full"></div>
+            <span class="text-2xl font-bold text-stone-800">Clay & Co.</span>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a href="/" class="hover:text-amber-600 transition-colors">Home</a>
+            <a href="/services" class="hover:text-amber-600 transition-colors">Services</a>
+            <a href="/locations" class="hover:text-amber-600 transition-colors">Locations</a>
+            <a href="/about" class="hover:text-amber-600 transition-colors">About</a>
+            <a href="/contact" class="hover:text-amber-600 transition-colors">Contact</a>
+          </div>
+          <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-stone-800">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden pb-4">
+          <a href="/" class="block py-2 hover:text-amber-600">Home</a>
+          <a href="/services" class="block py-2 hover:text-amber-600">Services</a>
+          <a href="/locations" class="block py-2 hover:text-amber-600">Locations</a>
+          <a href="/about" class="block py-2 hover:text-amber-600">About</a>
+          <a href="/contact" class="block py-2 hover:text-amber-600">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="bg-stone-800 text-white py-12">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <div class="w-6 h-6 bg-amber-600 rounded-full"></div>
+              <span class="text-xl font-bold">Clay & Co.</span>
+            </div>
+            <p class="text-stone-300">Handcrafted clay mugs made with love in New York.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-stone-300">
+              <li><a href="/" class="hover:text-white">Home</a></li>
+              <li><a href="/services" class="hover:text-white">Services</a></li>
+              <li><a href="/about" class="hover:text-white">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4">Contact</h3>
+            <ul class="space-y-2 text-stone-300">
+              <li>Brooklyn, NY</li>
+              <li>(555) 123-4567</li>
+              <li>hello@clayandco.com</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-stone-300 hover:text-white">Instagram</a>
+              <a href="#" class="text-stone-300 hover:text-white">Facebook</a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-stone-700 mt-8 pt-8 text-center text-stone-300">
+          <p>&copy; 2024 Clay & Co. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuBtn?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
